@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(12, 25, 37);
+}
+
+.navbar{
+    border: 1px solid black;
+    width: 100%;
+    height: 70px;
+    margin: 0px auto;
+    background-color: rgb(12, 25, 37);
+    color: #BFA181;
+}
+
+.navbar h1{
+    margin: auto 5%;
+    font-weight: bolder;
+}
+
+.navbar .form-check-input{
+    border: 1px solid black;
+    margin-right: 50px;
+}
+
+/* ------------------ for mobile screens -------------------- */
+@media(min-width: 300px){
+    .navbar .form-check-input{
+        margin-right: 15px;
+    }
+}
+/* ------------------ for tablet screens -------------------- */
+@media(min-width: 550px){
+    .navbar .form-check-input{
+        margin-right: 30px;
+    }
+}
+/* ------------------ for laptop screens -------------------- */
+@media(min-width: 900px){
+    .navbar .form-check-input{
+        margin-right: 50px;
+    }
+}
