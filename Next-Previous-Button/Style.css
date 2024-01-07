@@ -1,0 +1,127 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: rgb(12, 25, 37);
+    color: #bfa181;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-weight: bolder;
+}
+
+.line{
+    width: 90%;
+    height: 3px;
+    margin: 5% auto;
+    background-color: white;
+}
+
+.container{
+    /* border: 1px solid white; */
+    width: 80%;
+    height: fit-content;
+    padding: 1%;
+}
+
+.buttons{
+    /* border: 1px solid white; */
+    margin: 1% auto;
+    width: 90%;
+    height: fit-content;
+    padding: 1%;
+}
+
+.buttons button{
+    width: 15%;
+    height: 50px;
+}
+
+.btn1{
+    margin-left: 10%;
+}
+
+.btn2{
+    margin-left: 50%;
+}
+
+.div{
+    padding: 1%;
+}
+
+.div h1{
+    border: 1px solid white;
+    font-weight: bolder;
+    font-size: 22px;
+    text-align: center;
+    color: #bfa181;
+    padding: 1%;
+}
+
+
+/* ------------------ for mobile screens -------------------- */
+@media(min-width: 300px){
+    h1{
+        margin-top: 5%;
+        font-size: 25px;
+    }
+
+    .buttons button{
+        width: 20%;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .btn1{
+        margin-left: 15%;
+    }
+    
+    .btn2{
+        margin-left: 30%;
+    }
+}
+/* ------------------ for tablet screens -------------------- */
+@media(min-width: 600px){
+    h1{
+        margin-top: 5%;
+        font-size: 40px;
+    }
+
+    .buttons button{
+        width: 20%;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .btn1{
+        margin-left: 15%;
+    }
+    
+    .btn2{
+        margin-left: 30%;
+    }
+}
+/* ------------------ for laptop screens -------------------- */
+@media(min-width: 900px){
+    h1{
+        margin-top: 2%;
+        font-size: 60px;
+    }
+
+    .buttons button{
+        font-size: 30px;
+        width: 15%;
+        height: 50px;
+    }
+
+    .btn1{
+        margin-left: 10%;
+    }
+    
+    .btn2{
+        margin-left: 50%;
+    }
+}
