@@ -11,10 +11,10 @@ function FrontPage() {
   const [isNewsLoaded, changeNewsLoading] = useState(false);
 
   const emptyArray = () => {
-    for(let i=0;i<newsTitle.length;i++){
+    for (let i = 0; i < newsTitle.length; i++) {
       newsTitle.pop();
     }
-    console.log("newsTitle length after empty : "+newsTitle.length);
+    console.log("newsTitle length after empty : " + newsTitle.length);
   }
 
   useEffect(() => {
@@ -31,8 +31,8 @@ function FrontPage() {
 
   });
 
-  const getNewsList =async() => {
-    const news = await fetch("https://newsapi.org/v2/everything?q=apple&from=2024-01-05&to=2024-01-05&sortBy=popularity&apiKey=7170c63a57604df9af3272078490ac14&page="+ pageNumber);
+  const getNewsList = async () => {
+    const news = await fetch("https://newsapi.org/v2/everything?q=apple&from=2024-01-05&to=2024-01-05&sortBy=popularity&apiKey=7170c63a57604df9af3272078490ac14&page=" + pageNumber);
     const newsItem = await news.json();
     newsItem.articles.map((news) => {
       newsTitle.push(news);
@@ -44,7 +44,7 @@ function FrontPage() {
     if (pageNumber > 1) {
       emptyArray();
       console.log("previous clicked");
-      changePageNumber((parseInt(pageNumber))-1);
+      changePageNumber((parseInt(pageNumber)) - 1);
       console.log("pagenumber : " + setPageNumber(pageNumber, 1));
       getNewsList();
     } else {
@@ -56,7 +56,7 @@ function FrontPage() {
     if (pageNumber < 5) {
       emptyArray();
       console.log("next clicked");
-      changePageNumber((parseInt(pageNumber))+1);
+      changePageNumber((parseInt(pageNumber)) + 1);
       console.log("pagenumber : " + setPageNumber(pageNumber, 0));
       getNewsList();
     } else {
@@ -83,7 +83,7 @@ function FrontPage() {
               newsTitle.map((news) => {
                 return (
                   <div style={{ marginTop: "1%" }} key={news.publishedAt
-}>
+                  }>
                     <SingleComponent heading={news.title} />
                   </div>
                 )
